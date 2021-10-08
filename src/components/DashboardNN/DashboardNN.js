@@ -20,7 +20,7 @@ class DashboardNN extends Component {
           </div>
         </div>
       </div>
-      <div className="auth token">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</div>
+ 
     )
   }
 }
