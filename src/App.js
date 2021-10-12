@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/reset" component={Reset} />
           
           <Route exact path="/project/:id" component={ProjectDetails} />
-          <Route ecact path="/createproject" component = {CreateProject} />
+          <Route exact path="/createproject" component = {CreateProject} />
           
         </Switch>
       </Router>

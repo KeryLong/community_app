@@ -20,7 +20,7 @@ class DashboardNN extends Component {
           </div>
         </div>
       </div>
- 
+      
     )
   }
 }

@@ -1,16 +1,20 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
+import 'firebase/firestore';
+import 'firebase/auth';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAs54UdAx_qUjBfZREC7IvGpkF5O09rL4M",
-  authDomain: "clean-communities-cbd31.firebaseapp.com",
-  projectId: "clean-communities-cbd31",
-  storageBucket: "clean-communities-cbd31.appspot.com",
-  messagingSenderId: "750401903565",
-  appId: "1:750401903565:web:c787857a48c8ae0a0bc284",
-  measurementId: "G-CC1Z8B3DLC"
+const fbConfig = {
+  apiKey: "AIzaSyCkFj8WUI_IDV--Ol07EIV8JUAekEHrKVE",
+  authDomain: "marioplan-e0345.firebaseapp.com",
+  databaseURL: "https://marioplan-e0345-default-rtdb.firebaseio.com",
+  projectId: "marioplan-e0345",
+  storageBucket: "marioplan-e0345.appspot.com",
+  messagingSenderId: "822718664062",
+  appId: "1:822718664062:web:f2dc9fedc81d2b72c5772f",
+  measurementId: "G-J647Q5ZDRR"
 };
 
 const app = firebase.initializeApp(firebaseConfig);
+firebase.firestore().settings({ timestampsInSnapshots: true})
 const auth = app.auth();
 const db = app.firestore();
 
@@ -80,11 +84,14 @@ const sendPasswordResetEmail = async (email) => {
   }
 };
 
+
 const logout = () => {
   auth.signOut();
 };
 
 export {
+  fbConfig,
+  firebase,
   auth,
   db,
   signInWithGoogle,
