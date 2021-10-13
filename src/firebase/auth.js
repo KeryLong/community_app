@@ -13,7 +13,7 @@ const fbConfig = {
   measurementId: "G-J647Q5ZDRR"
 };
 
-const app = firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(fbConfig);
 firebase.firestore().settings({ timestampsInSnapshots: true})
 const auth = app.auth();
 const db = app.firestore();
